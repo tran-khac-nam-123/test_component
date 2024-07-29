@@ -1,0 +1,28 @@
+a{
+    color: black;
+}
+
+.abc{
+    width: 360px;
+    height: 780px;
+    background-color: white;
+}
+
+/* .abc{
+    display: block;
+    position: fixed;
+    left: 88px;
+} */
+
+.process{
+    justify-content: space-between;
+    justify-items: center;
+    border-bottom: 1px solid rgb(197, 189, 189);
+}
+
+.title-name{
+    width: 996px;
+    justify-content: space-between;
+    justify-items: center;
+}
+

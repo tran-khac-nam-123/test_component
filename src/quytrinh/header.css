@@ -1,0 +1,45 @@
+
+.triangle-first{
+    width: 280px;
+    height: 40px;
+    background-color: #f1b44c;
+    font-size: 12px;
+}
+
+.triangle-second{
+    width: 280px;
+    height: 40px;
+    background-color: #74788d;
+    font-size: 12px;
+}
+
+.triangle-third{
+    width: 280px;
+    height: 40px;
+    background-color: #74788d;
+    font-size: 12px;
+}
+
+.triangle-a {
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-left: 20px solid #f1b44c;
+    border-bottom: 20px solid transparent;
+}
+
+.triangle-b {
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-left: 20px solid #74788d;
+    border-bottom: 20px solid transparent;
+}
+
+.triangle-c {
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-left: 20px solid #74788f;
+    border-bottom: 20px solid transparent;
+}

@@ -1,0 +1,492 @@
+<div>
+        {showFormLamThem && (
+          <div className="ao">
+            <div className="title-name col-md-11 d-flex mb-5 mt-3">
+              <div>
+                <h6 className="pt-2">YÊU CẦU LÀM THÊM GIỜ</h6>
+              </div>
+              <div className="">
+                <ButtonGroup className="pt-1">
+                  <button
+                    type="button"
+                    style={{ background: "white" }}
+                    className="border-0"
+                  >
+                    Quy trình
+                  </button>
+                  /
+                  <button
+                    type="button"
+                    style={{ background: "white" }}
+                    className="border-0"
+                  >
+                    Yêu Cầu Làm Thêm Giờ
+                  </button>
+                </ButtonGroup>
+              </div>
+            </div>
+            <div>
+              <HeaDer />
+            </div>
+            <div
+              style={{ width: "1000px" }}
+              className="row ms-0 me-0 shadow p-3 mb-5 bg-body-tertiary rounded"
+            >
+              <table className="table table-striped mb-3 responsiveTable">
+                <thead>
+                  <tr>
+                    <th>Title</th>
+                    <th>Descriptions</th>
+                    <th className="text-center">Hoạt động</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {this.props.items.map((item) => (
+                    <tr key={item.Id}>
+                      <td>{item.Title}</td>
+                      <td>{item.Descriptions}</td>
+                      <td>
+                        <div className="button-items text-center">
+                          <button
+                            className="btn btn-sm waves-effect waves-light"
+                            color="primary"
+                          >
+                            <i className="fa fa-pencil mr-2 align-middle text-primary font-size-16"></i>
+                          </button>
+                          <button
+                            type="button"
+                            className="btn btn-sm waves-effect waves-light"
+                            color="primary"
+                          >
+                            <i className="fa fa-trash mr-2 align-middle text-danger font-size-16"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+              <table>
+                <thead>
+                  <tr>
+                    <td>
+                      <h5 className="mt-5 ps-2">Thông tin chung</h5>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <label
+                        for="example-text-input"
+                        className="col-md-3 col-form-label ps-4"
+                      >
+                        {obj.Title}
+                        <span className="text-danger">*</span>
+                      </label>
+                    </td>
+                    <td>
+                      <label
+                        for="example-text-input"
+                        className="col-md-3 col-form-label"
+                      >
+                        {obj.MoTa}
+                        <span className="text-danger">*</span>
+                      </label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div className="col-md-11 ps-4">
+                        <input
+                          className="form-control"
+                          type="text"
+                          name="Title"
+                        />
+                      </div>
+                    </td>
+                    <td>
+                      <div className="col-md-11">
+                        <textarea className="form-control" type="text" />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label
+                        for="example-text-input"
+                        className="col-md-9 col-form-label ps-4"
+                      >
+                        {obj.TimeStart}
+                        <span className="text-danger">*</span>
+                      </label>
+                    </td>
+                    <td>
+                      <label
+                        for="example-text-input"
+                        className="col-md-9 col-form-label"
+                      >
+                        {obj.TimeEnd}
+                        <span className="text-danger">*</span>
+                      </label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div className="col-md-11 ps-4">
+                        <input className="form-control" type="datetime-local" />
+                      </div>
+                    </td>
+                    <td>
+                      <div className="col-md-11">
+                        <input className="form-control" type="datetime-local" />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label
+                        for="example-text-input"
+                        className="col-md-5 col-form-label ps-4"
+                      >
+                        {obj.SoGioLam}
+                        <span className="text-danger">*</span>
+                      </label>
+                    </td>
+                    <td>
+                      <label
+                        for="example-text-input"
+                        className="col-md-5 col-form-label"
+                      >
+                        {obj.PhanLoaiLT}
+                        <span className="text-danger">*</span>
+                      </label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div className="col-md-11 ps-4">
+                        <input className="form-control" type="number" />
+                      </div>
+                    </td>
+                    <td>
+                      <div className="col-md-11">
+                        <select className="form-control">
+                          <option>--Lựa chọn--</option>
+                          <option>Thêm giờ ngày thường (18h - 22h)</option>
+                          <option>Thêm giờ cuối tuần (8h - 22h)</option>
+                          <option>Thêm giờ ngày lễ (8h - 22h)</option>
+                          <option>Thêm giờ đêm thường (22h - 6h)</option>
+                          <option>Thêm giờ đêm cuối tuần(22h - 6h)</option>
+                          <option>Thêm giờ đêm lễ (22h - 6h)</option>
+                        </select>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <label
+                        for="example-text-input"
+                        className="col-md-9 col-form-label ps-4"
+                      >
+                        {obj.TruongBoPhan}
+                        <span className="text-danger">*</span>
+                      </label>
+                    </td>
+                    <td>
+                      <label
+                        for="example-text-input"
+                        className="col-md-9 col-form-label"
+                      >
+                        {obj.PhanTram}
+                      </label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div className="col-md-11 ps-4 mb-5">
+                        <input
+                          className="form-control"
+                          type="text"
+                          placeholder="Tìm kiếm người dùng"
+                        />
+                      </div>
+                    </td>
+                    <td>
+                      <div className="col-md-11 mb-5">
+                        <input className="form-control" type="number" />
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div>
+              <AddFile />
+              <ConFirm />
+            </div>
+          </div>
+        )}
+        {showFromXinNghi && (
+          <div className="ao">
+            <div className="title-name col-md-11 d-flex mb-5 mt-3">
+              <div>
+                <h6 className="pt-2">XIN NGHỈ PHÉP</h6>
+              </div>
+              <div className="">
+                <ButtonGroup className="pt-1">
+                  <button
+                    type="button"
+                    style={{ background: "white" }}
+                    className="border-0"
+                  >
+                    Quy trình
+                  </button>
+                  /
+                  <button
+                    type="button"
+                    style={{ background: "white" }}
+                    className="border-0"
+                  >
+                    Xin nghỉ phép
+                  </button>
+                </ButtonGroup>
+              </div>
+            </div>
+            <div>
+              <HeaDer />
+            </div>
+            <div
+              style={{ width: "1000px" }}
+              className="row ms-0 me-0 shadow p-3 mb-5 bg-body-tertiary rounded"
+            >
+              <table className="table table-striped mb-3 responsiveTable">
+                <thead>
+                  <tr>
+                    <th>Title</th>
+                    <th>Descriptions</th>
+                    <th className="text-center">Hoạt động</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {this.props.items.map((item) => (
+                    <tr key={item.Id}>
+                      <td>{item.Title}</td>
+                      <td>{item.Descriptions}</td>
+                      <td>
+                        <div className="button-items text-center">
+                          <button
+                            className="btn btn-sm waves-effect waves-light"
+                            color="primary"
+                          >
+                            <i className="fa fa-pencil mr-2 align-middle text-primary font-size-16"></i>
+                          </button>
+                          <button
+                            type="button"
+                            className="btn btn-sm waves-effect waves-light"
+                            color="primary"
+                          >
+                            <i className="fa fa-trash mr-2 align-middle text-danger font-size-16"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+              <table>
+                <thead>
+                  <tr>
+                    <td>
+                      <h5 className="mt-5 ps-2">Thông tin chung</h5>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <label
+                        for="example-text-input"
+                        className="col-md-3 col-form-label ps-4"
+                      >
+                        {obj.Title}
+                        <span className="text-danger">*</span>
+                      </label>
+                    </td>
+                    <td>
+                      <label
+                        for="example-text-input"
+                        className="col-md-3 col-form-label"
+                      >
+                        {obj.LyDo}
+                        <span className="text-danger">*</span>
+                      </label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div className="col-md-11 ps-4">
+                        <input className="form-control" type="text" />
+                      </div>
+                    </td>
+                    <td>
+                      <div className="col-md-11">
+                        <textarea className="form-control" type="text" />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label
+                        for="example-text-input"
+                        className="col-md-3 col-form-label ps-4"
+                      >
+                        {obj.LoaiXinNghi}
+                        <span className="text-danger">*</span>
+                      </label>
+                    </td>
+                    <td>
+                      <label
+                        for="example-text-input"
+                        className="col-md-3 col-form-label"
+                      >
+                        {obj.ThoiGian}
+                        <span className="text-danger">*</span>
+                      </label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div className="col-md-11 ps-4">
+                        <select className="form-control">
+                          <option>--Lựa chọn--</option>
+                          <option>Nghỉ không lương</option>
+                          <option>Nghỉ phép năm</option>
+                          <option>Nghỉ du lịch công ty</option>
+                          <option>Nghỉ bản thân kết hôn</option>
+                        </select>
+                      </div>
+                    </td>
+                    <td>
+                      <div className="col-md-11">
+                        <select className="form-control">
+                          <option>--Lựa chọn--</option>
+                          <option>Cả ngày</option>
+                          <option>Buổi sáng</option>
+                          <option>Buổi chiều</option>
+                        </select>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label
+                        for="example-text-input"
+                        className="col-md-9 col-form-label ps-4"
+                      >
+                        {obj.TimeStart}
+                        <span className="text-danger">*</span>
+                      </label>
+                    </td>
+                    <td>
+                      <label
+                        for="example-text-input"
+                        className="col-md-9 col-form-label"
+                      >
+                        {obj.TimeEnd}
+                        <span className="text-danger">*</span>
+                      </label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div className="col-md-11 ps-4">
+                        <input className="form-control" type="datetime-local" />
+                      </div>
+                    </td>
+                    <td>
+                      <div className="col-md-11">
+                        <input className="form-control" type="datetime-local" />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label
+                        for="example-text-input"
+                        className="col-md-9 col-form-label ps-4"
+                      >
+                        {obj.TimeDiMuon}
+                      </label>
+                    </td>
+                    <td>
+                      <label
+                        for="example-text-input"
+                        className="col-md-9 col-form-label"
+                      >
+                        {obj.TongNgayNghi}
+                      </label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div className="col-md-11 ps-4">
+                        <input className="form-control" type="number" />
+                      </div>
+                    </td>
+                    <td>
+                      <div className="col-md-11">
+                        <input className="form-control" type="number" />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label
+                        for="example-text-input"
+                        className="col-md-9 col-form-label ps-4"
+                      >
+                        {obj.ThongBaoCho}
+                      </label>
+                    </td>
+                    <td>
+                      <label
+                        for="example-text-input"
+                        className="col-md-9 col-form-label"
+                      >
+                        {obj.TruongBoPhan}
+                        <span className="text-danger">*</span>
+                      </label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div className="col-md-11 ps-4 pb-5">
+                        <input
+                          className="form-control"
+                          type="text"
+                          placeholder="Tìm kiếm người dùng"
+                        />
+                      </div>
+                    </td>
+                    <td>
+                      <div className="col-md-11 pb-5">
+                        <input
+                          className="form-control"
+                          type="text"
+                          placeholder="Tìm kiếm người dùng"
+                        />
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div>
+              <AddFile />
+              <ConFirm />
+            </div>
+          </div>
+        )}
+      </div>

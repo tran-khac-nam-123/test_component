@@ -1,0 +1,52 @@
+.wrapper{
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.nav a{
+  text-decoration: none;
+}
+
+#menu{
+  width: 100px;
+  padding-left: 3px;
+  background-color: #f0f0f0;
+}
+
+/* #menu{
+  display: block;
+  position: fixed;
+} */
+
+.nav-item{
+  font-size: 12px;
+  box-sizing: content-box;
+}
+
+.icon{
+  font-size: 20px;
+}
+
+.title{
+  width: 85px;
+  color: black;
+}
+
+.title:hover{
+  background-color: white;
+  color: blue;
+}
+
+.notification-panel {
+  width: 300px;
+  border-left: 1px solid #ddd;
+  background-color: white;
+  
+}
+
+.process-panel {
+  width: 300px;
+  border-left: 1px solid #ddd;
+  background-color: white;
+}
